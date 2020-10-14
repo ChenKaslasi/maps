@@ -12,45 +12,60 @@
 <body onload="onHomeLoad()">
 
   <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b>MAPS</b> .COM</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="maps.html" class="w3-bar-item w3-button">Our maps</a>
-      <a href="user-prefs.html" class="w3-bar-item w3-button">User preferences</a>
+  <nav>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="index.html" class="w3-bar-item w3-button"><b>MAPS</b> .COM</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="maps.html" class="w3-bar-item w3-button">Our maps</a>
+          <a href="user-prefs.html" class="w3-bar-item w3-button">User preferences</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </nav>
 
-  
+
   <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
     <img class="w3-image headerImg" src="images/header.jpg" alt="Architecture" width="1500" height="800">
     <div class="w3-display-middle w3-margin-top w3-center">
-      <h1 class="w3-xxlarge w3-text-white header"><span class="w3-padding w3-black w3-opacity-min"><b>MAPS</b></span> <span class="w3-hide-small w3-text-light-grey">.COM</span></h1>
+      <h1 class="w3-xxlarge w3-text-white header"><span class="w3-padding w3-black w3-opacity-min"><b>MAPS</b></span>
+        <span class="w3-hide-small w3-text-light-grey">.COM</span></h1>
     </div>
   </header>
-  
- <!-- Page content -->
- <div class="w3-container" id="about">
-  <h1 class="w3-padding-4 name">Hi name!</h1>
-  <h4 class="w3-border-bottom w3-padding-16">Here is your astrological forcast:</h4>
-</div>
 
-  <div class="astroCard">
-    <h1 class="constellation">Constellation</h1>
-    <h3 class="w3-opacity shortP date">monthStart-monthEnd</h3>
-    <p class="description">desp</p>
-  </div>
-  
+  <!-- Page content -->
+  <section>
+    <div class="initPage">
+      <div class="w3-container">
+        <h1 class="w3-padding-4 name">Hello!</h1>
+        <h4 class="w3-border-bottom w3-padding-16">Get your astrological forcast <a
+            style="color: blue; font-weight: bold;" href="user-prefs.html">here</a>.</h4>
+      </div>
+    </div>
+
+
+    <div class="usePref hide">
+      <div class="w3-container">
+        <h1 class="w3-padding-4 namePref">Hi name!</h1>
+        <h4 class="w3-border-bottom w3-padding-16">Here is your astrological forcast:</h4>
+      </div>
+      <div class="astroCard">
+        <h1 class="constellation">Constellation</h1>
+        <h3 class="w3-opacity shortP date">monthStart-monthEnd</h3>
+        <p class="description">desp</p>
+      </div>
+    </div>
+
+  </section>
   <!-- End page content -->
- 
-  
+
+
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-16">
     <p>Ⓒ Made by Chen Kaslasi </p>
   </footer>
-  
+
 
   <script src="js/placeController.js"></script>
   <script src="js/placeService.js"></script>
@@ -61,5 +76,3 @@
 </body>
 
 </html>
-
-

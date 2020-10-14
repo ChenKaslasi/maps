@@ -1,6 +1,4 @@
 'use strict';
-
-const eilat  = {lat: 29.558988, lng: 34.952703};
 let map;
 
 
@@ -18,7 +16,7 @@ function error(err) {
 function initMap(lat,lng ) {
   var elMap = document.querySelector('#map');
   var options = {
-      center: {lat,lng},
+      center: {lat,lng} ,
       zoom: 16
   };
 
@@ -31,4 +29,9 @@ function initMap(lat,lng ) {
       position: { lat, lng },
       map,
   });
+}
+
+
+function onEilatLoc() {
+  initMap(29.558988,34.952703)
 }

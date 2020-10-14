@@ -5,8 +5,12 @@ function saveToStorage(key, val) {
   localStorage.setItem(key, str)
 }
 
-function loadFromStorage(key) {
-      var str = localStorage.getItem(key)
-      return JSON.parse(str)
-  }
-  
+function loadFromStorage(key) {
+  var str = localStorage.getItem(key)
+  return JSON.parse(str)
+}
+
+
+function toggleClass(el, toggleClass) {
+  document.querySelector(`.${el}`).classList.toggle(`${toggleClass}`);
+}
