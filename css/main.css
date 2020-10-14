@@ -1689,3 +1689,24 @@ a {
 .w3-border-pale-blue, .w3-hover-border-pale-blue:hover {
   border-color: #e7ffff!important
 }
+
+
+
+/* My css  */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+
+.astroCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+  margin: 1rem 5em ;
+  padding:  1em;
+  border: 3px solid black;
+}
