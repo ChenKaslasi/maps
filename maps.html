@@ -5,48 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/map.css">
   <title>Maps - Maps.com</title>
+
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQAMCiYL5QhL2ZQBGzkxE1t7P2soWUT7Y&callback=initMap">
+    </script>
+
 </head>
 
-<body>
-  
-    <!-- Navigation -->
-    <nav>
-      <div class="w3-top">
-        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-          <a href="index.html" class="w3-bar-item w3-button"><b>MAPS.COM</b> </a>
-          <!-- Float links to the right. Hide them on small screens -->
-          <div class="w3-center w3-hide-small">
-            <a href="maps.html" class="w3-bar-item w3-button">Our maps</a>
-            <a href="user-prefs.html" class="w3-bar-item w3-button">User preferences</a>
-          </div>
-        </div>
+<body onload="getPosition()">
+
+  <!-- Navigation -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="index.html" class="w3-bar-item w3-button"><b>MAPS</b> .COM</a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="maps.html" class="w3-bar-item w3-button">Our maps</a>
+        <a href="user-prefs.html" class="w3-bar-item w3-button">User preferences</a>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <!-- Header -->
-    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-      <img class="w3-image" src="images/header.jpg" alt="Architecture" width="1500" height="800">
-      <div class="w3-display-middle w3-margin-top w3-center">
-        <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>MAPS</b></span> <span
-            class="w3-hide-small w3-text-light-grey">.COM</span></h1>
+  <!-- Page content -->
+  <div id="map"></div>
+  <div class="cards">
+    <div class="card">
+      <header class="w3-container w3-blue cardHeader">
+        <h3 style="flex: 12;">Header</h3>
+        <span style='font-size:30px; cursor: pointer;'>&#10006;</span>
+      </header>
+      <div class="w3-container">
+        <p>Lorem ipsum...</p>
       </div>
-    </header>
-
-    <!-- Page content -->
-
-      
-      <!-- End page content -->
+    </div>
+  </div>
 
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-16">
-      <p> Ⓒ Made by Chen Kaslasi </p>
-    </footer>
 
-  <script src="js/controller.js"></script>
+  <!-- End page content -->
+
+  <script src="js/placeController.js"></script>
   <script src="js/placeService.js"></script>
   <script src="js/userPrefService.js"></script>
+  <script src="js/userPrefcontroller.js"></script>
   <script src="js/utilService.js"></script>
 </body>
 

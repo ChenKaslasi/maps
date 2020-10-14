@@ -12,13 +12,13 @@
 
     <!-- Navigation -->
     <nav>
-      <div class="w3-top">
-        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-          <a href="index.html" class="w3-bar-item w3-button"><b>MAPS.COM</b> </a>
+      <div class="top">
+        <div class="bar white wide padding card">
+          <a href="index.html" class="bar-item button"><b>MAPS.COM</b> </a>
           <!-- Float links to the right. Hide them on small screens -->
-          <div class="w3-center w3-hide-small">
-            <a href="maps.html" class="w3-bar-item w3-button">Our maps</a>
-            <a href="user-prefs.html" class="w3-bar-item w3-button">User preferences</a>
+          <div class="center hide-small">
+            <a href="maps.html" class="bar-item button">Our maps</a>
+            <a href="user-prefs.html" class="bar-item button">User preferences</a>
           </div>
         </div>
       </div>
@@ -26,27 +26,27 @@
 
 
     <!-- Page content -->
-    <h2>Sign Up Form</h2>
-
-    <datalist id="contactList">
-      <option value="puky@puk.com" label="Puki" />
-      <option value="support@example.com" label="Support" />
-      <option value="admin@example.com" label="Administrator" />
-    </datalist>
-
-    <form id="frmRegister">
-      <label for="date">Date of Birth:</label>
-      <input type="date" id="date" class="date" />
-      <br>
-      <br>
-      Text color: <input class="textcolor" type="color" id="color" form="frmRegister" value="#ff0000" />
-      <br>
-      <br>
-      Background color: <input class="background" type="color" id="color" form="frmRegister" value="#ff0000" />
-      <br>
-      <br>
-      <button type="button" onclick="onSubmitForm(event)">Apply changes</button>
-    </form><br />
+    
+  <form id="formId">
+    <div class="form">
+        <h2>User prefernces</h2>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" class="name" id="name" name="name" placeholder="First and last name" required />
+        </div>
+        <div>
+          <label for="date">Date of Birth:</label>
+          <input type="date" id="date" name="date" class="date" required/>
+        </div>
+        <div>
+          Text color: <input class="textcolor" type="color" id="color" form="formId" value="#000000" />
+        </div>
+        <div>
+          Background color: <input class="background" type="color" id="color" form="formId" value="#ffffff" />
+        </div>
+        <button type="submit" onclick="onSubmitForm(event)">Apply changes</button>
+      </div>
+    </form>
 
 
     <!-- End page content -->
@@ -57,10 +57,11 @@
       <p> Ⓒ Made by Chen Kaslasi </p>
     </footer>
 
-  <script src="js/controller.js"></script>
-  <script src="js/placeService.js"></script>
-  <script src="js/userPrefService.js"></script>
-  <script src="js/utilService.js"></script>
+    <script src="js/placeController.js"></script>
+    <script src="js/placeService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/userPrefcontroller.js"></script>
+    <script src="js/utilService.js"></script>
   
   
 </body>

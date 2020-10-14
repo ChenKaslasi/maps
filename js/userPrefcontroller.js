@@ -1,16 +1,16 @@
 'use strict';
 
-function onSubmitForm(event) {
+function onSubmitForm(event,) {
   event.preventDefault()
+  let name = document.querySelector('.name').value
   let date = document.querySelector('.date').value
   let backgroundColor = document.querySelector('.background').value
   let textColor = document.querySelector('.textcolor').value
   
-  let userData = createUserProfile(date,backgroundColor,textColor);
+  let userData = createUserProfile(date,backgroundColor,textColor,name);
   saveUserPref(userData)
   window.location = 'index.html'
 }
-
 
 
 function onHomeLoad() {
@@ -20,12 +20,12 @@ function onHomeLoad() {
 
 
 function renderUserPref(userPref) {
-  
   renderStyle(userPref)
   renderAstro(userPref)
 }
 
 function renderStyle(userPref) {
+  document.querySelector('.name').innerHTML = `Hi ${userPref.name}!`
   document.querySelector('html').style.backgroundColor = userPref.backGroundColor
   document.querySelector('html').style.color = userPref.textColor
 }
@@ -33,6 +33,12 @@ function renderStyle(userPref) {
 function renderAstro(userPref) {
   let {astrologicForcast} = userPref
   document.querySelector('.constellation').innerHTML = astrologicForcast.name
-  document.querySelector('.date').innerHTML = `${astrologicForcast.startTime} --- ${astrologicForcast.endTime}`
+  document.querySelector('.date').innerHTML = `${astrologicForcast.startTime} <---> ${astrologicForcast.endTime}`
   document.querySelector('.description').innerHTML = astrologicForcast.desc
+}
+
+
+
+function checkEmptyFields(name,date) {
+
 }

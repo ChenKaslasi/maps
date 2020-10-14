@@ -17,8 +17,9 @@ const gForcast = [
 
 ]
 
-function createUserProfile(date, backgroundColor, textColor) {
+function createUserProfile(date, backgroundColor, textColor,name) {
   let userData = {
+    name: name,
     birthDate: date,
     backGroundColor: backgroundColor,
     textColor: textColor,
